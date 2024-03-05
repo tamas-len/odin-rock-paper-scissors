@@ -37,7 +37,14 @@ function playRound(playerSelection, computerSelection) {
                 }
                 else
                 {
-                    return "player wins"
+                    if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors")
+                    {
+                        return "player wins"
+                    }
+                    else
+                    {
+                        return "not a valid move, u loose, comp wins"
+                    }
                 }
             }
         }
