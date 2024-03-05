@@ -1,6 +1,12 @@
 let states = ['rock', 'paper', 'scissors'];
 console.log(states);
 
+const playerSelection = "roCk";
+let computerSelection = getComputerChoice();
+
+let pointsComp = 0;
+let pointsPlayer = 0;
+
 function play(comp)
 {
     const choice = prompt("choose")
@@ -17,17 +23,26 @@ function getComputerChoice()
 function playRound(playerSelection, computerSelection) {
     if (computerSelection == "rock" && playerSelection == "scissors")
     {
+        console.log("player's points: " + pointsPlayer);
+        console.log("computer's points: " + pointsComp);
+        pointsComp += 1;
         return "comp wins"
     }
     else{
         if(computerSelection == "paper" && playerSelection == "rock")
         {
+            console.log("player's points: " + pointsPlayer);
+            console.log("computer's points: " + pointsComp);
+            pointsComp += 1;
             return "comp wins"
         }
         else
         {
             if (computerSelection == "scissors" && playerSelection == "paper")
             {
+                console.log("player's points: " + pointsPlayer);
+                console.log("computer's points: " + pointsComp);
+                pointsComp += 1;
                 return "comp wins"
             }
             else {
@@ -39,10 +54,16 @@ function playRound(playerSelection, computerSelection) {
                 {
                     if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors")
                     {
+                        pointsPlayer += 1;
+                        console.log("player's points: " + pointsPlayer);
+                        console.log("computer's points: " + pointsComp);
                         return "player wins"
                     }
                     else
                     {
+                        pointsComp += 1;
+                        console.log("player's points: " + pointsPlayer);
+                        console.log("computer's points: " + pointsComp);
                         return "not a valid move, u loose, comp wins"
                     }
                 }
@@ -50,9 +71,6 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
-  
-const playerSelection = "roCk";
-let computerSelection = getComputerChoice();
 
 console.log(computerSelection);
  
