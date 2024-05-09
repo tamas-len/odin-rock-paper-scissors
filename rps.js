@@ -7,12 +7,9 @@ let computerSelection = getComputerChoice();
 let pointsComp = 0;
 let pointsPlayer = 0;
 
-function play(comp)
-{
-    const choice = prompt("choose")
-    console.log("player's choice: " + choice);
-    return playRound(choice.toLowerCase(), comp);
-}
+const paperbtn = document.querySelector('.paper');
+const rockbtn = document.querySelector('.rock');
+const scissorsbtn = document.querySelector('.scissors');
 
 function getComputerChoice()
 {
@@ -72,18 +69,4 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(computerSelection);
- 
-console.log("automatic")
-console.log(playRound(playerSelection.toLowerCase(), computerSelection));
-
-let rounds = prompt("how many rounds do you want to play")
-
-for (i = 0; i < rounds; i++)
-{
-    computerSelection = getComputerChoice();
-    console.log(" ");
-    console.log("ur " + (i + 1) + "th game");
-    console.log(play(computerSelection));
-    console.log("computer's play: " + computerSelection);
-}
+paperbtn.addEventListener('click', () => console.log(playRound('paper', computerSelection)));
