@@ -1,24 +1,23 @@
 let states = ['rock', 'paper', 'scissors'];
 console.log(states);
 
-const playerSelection = "roCk";
 let computerSelection = getComputerChoice();
-console.log(computerSelection);
+console.log(computerSelection); //only for dev purposes
 
 let pointsComp = 0;
 let pointsPlayer = 0;
 
-const paperbtn = document.querySelector('#paper');
+const paperbtn = document.querySelector('#paper'); //get the buttons from the DOM
 const rockbtn = document.querySelector('#rock');
 const scissorsbtn = document.querySelector('#scissors');
 
 function getComputerChoice()
 {
-    return states[Math.floor(Math.random() * 3 + 0)];
+    return states[Math.floor(Math.random() * 3 + 0)]; //chooses randomly from the 'states' array
 }
 
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) { //compares the players and computers choices
     if (computerSelection == "rock" && playerSelection == "scissors")
     {
         console.log("player's points: " + pointsPlayer);
@@ -69,6 +68,9 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
+
+
+//buttons
 
 paperbtn.addEventListener('click', () => {console.log(playRound('paper', computerSelection))});
 rockbtn.addEventListener('click', () => {console.log(playRound('rock', computerSelection))});
