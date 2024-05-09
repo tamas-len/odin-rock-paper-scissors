@@ -3,6 +3,7 @@ console.log(states);
 
 const playerSelection = "roCk";
 let computerSelection = getComputerChoice();
+console.log(computerSelection);
 
 let pointsComp = 0;
 let pointsPlayer = 0;
@@ -70,3 +71,5 @@ function playRound(playerSelection, computerSelection) {
 }
 
 paperbtn.addEventListener('click', () => {console.log(playRound('paper', computerSelection))});
+rockbtn.addEventListener('click', () => {console.log(playRound('rock', computerSelection))});
+scissorsbtn.addEventListener('click', () => {console.log(playRound('scissors', computerSelection))});
