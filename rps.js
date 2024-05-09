@@ -75,3 +75,5 @@ function playRound(playerSelection, computerSelection) { //compares the players 
 paperbtn.addEventListener('click', () => {console.log(playRound('paper', computerSelection))});
 rockbtn.addEventListener('click', () => {console.log(playRound('rock', computerSelection))});
 scissorsbtn.addEventListener('click', () => {console.log(playRound('scissors', computerSelection))});
+
+//note to self: add dark mode light mode switch
