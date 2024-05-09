@@ -7,9 +7,9 @@ let computerSelection = getComputerChoice();
 let pointsComp = 0;
 let pointsPlayer = 0;
 
-const paperbtn = document.querySelector('.paper');
-const rockbtn = document.querySelector('.rock');
-const scissorsbtn = document.querySelector('.scissors');
+const paperbtn = document.querySelector('#paper');
+const rockbtn = document.querySelector('#rock');
+const scissorsbtn = document.querySelector('#scissors');
 
 function getComputerChoice()
 {
@@ -69,4 +69,4 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-paperbtn.addEventListener('click', () => console.log(playRound('paper', computerSelection)));
+paperbtn.addEventListener('click', () => {console.log(playRound('paper', computerSelection))});
