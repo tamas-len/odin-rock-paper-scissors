@@ -1,3 +1,28 @@
 body {
     background-color: white;
 }
+
+#results {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resbox {
+    margin: 20px;
+}
+
+#root {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
