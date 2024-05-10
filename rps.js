@@ -1,6 +1,24 @@
 let states = ['rock', 'paper', 'scissors'];
 console.log(states);
 
+var dict = 
+{
+    "rock" : "paper",
+    "paper" : "scissors",
+    "scissors" : "rock"
+};
+
+/*
+
+1 < 2 < 3
+rock < paper < scissors
+
+rock - paper
+paper - scissors
+scissors - rock
+
+*/
+
 let computerSelection = getComputerChoice();
 
 let round = 0;
@@ -34,52 +52,29 @@ function writeOut()
 
 function playRound(playerSelection, computerSelection) { //compares the players and computers choices
     computerSelection = getComputerChoice();
+    console.log(computerSelection);
     round++;
     roundElement.textContent = 'round ' + round;
-    if (computerSelection == "rock" && playerSelection == "scissors")
+
+    if (playerSelection == computerSelection)
     {
-        pointsComp += 1;
+        ties++;
         writeOut();
-        return "comp wins"
+        return "tie"
     }
-    else{
-        if(computerSelection == "paper" && playerSelection == "rock")
+    else
+    {
+        if(dict[playerSelection] == computerSelection)
         {
-            pointsComp += 1;
+            pointsComp++;
             writeOut();
             return "comp wins"
         }
         else
         {
-            if (computerSelection == "scissors" && playerSelection == "paper")
-            {
-                pointsComp += 1;
-                writeOut();
-                return "comp wins"
-            }
-            else {
-                if (computerSelection == playerSelection)
-                {
-                    ties++;
-                    writeOut();
-                    return "tie"
-                }
-                else
-                {
-                    if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors")
-                    {
-                        pointsPlayer += 1;
-                        writeOut();
-                        return "player wins"
-                    }
-                    else
-                    {
-                        pointsComp += 1;
-                        writeOut();
-                        return "not a valid move, u loose, comp wins"
-                    }
-                }
-            }
+            pointsPlayer++;
+            writeOut();
+            return "player wins"
         }
     }
 }
