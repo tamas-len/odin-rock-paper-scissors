@@ -24,26 +24,26 @@ function getComputerChoice()
 function playRound(playerSelection, computerSelection) { //compares the players and computers choices
     if (computerSelection == "rock" && playerSelection == "scissors")
     {
-        console.log("player's points: " + pointsPlayer);
-        console.log("computer's points: " + pointsComp);
         pointsComp += 1;
+        playerpoints.textContent = "player's points: " + pointsPlayer
+        comppoints.textContent = "computer's points: " + pointsComp;
         return "comp wins"
     }
     else{
         if(computerSelection == "paper" && playerSelection == "rock")
         {
-            console.log("player's points: " + pointsPlayer);
-            console.log("computer's points: " + pointsComp);
             pointsComp += 1;
+            playerpoints.textContent = "player's points: " + pointsPlayer
+            comppoints.textContent = "computer's points: " + pointsComp;
             return "comp wins"
         }
         else
         {
             if (computerSelection == "scissors" && playerSelection == "paper")
             {
-                console.log("player's points: " + pointsPlayer);
-                console.log("computer's points: " + pointsComp);
                 pointsComp += 1;
+                playerpoints.textContent = "player's points: " + pointsPlayer
+                comppoints.textContent = "computer's points: " + pointsComp;
                 return "comp wins"
             }
             else {
@@ -56,15 +56,15 @@ function playRound(playerSelection, computerSelection) { //compares the players 
                     if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors")
                     {
                         pointsPlayer += 1;
-                        console.log("player's points: " + pointsPlayer);
-                        console.log("computer's points: " + pointsComp);
+                        playerpoints.textContent = "player's points: " + pointsPlayer
+                        comppoints.textContent = "computer's points: " + pointsComp;
                         return "player wins"
                     }
                     else
                     {
                         pointsComp += 1;
-                        console.log("player's points: " + pointsPlayer);
-                        console.log("computer's points: " + pointsComp);
+                        playerpoints.textContent = "player's points: " + pointsPlayer
+                        comppoints.textContent = "computer's points: " + pointsComp;
                         return "not a valid move, u loose, comp wins"
                     }
                 }
