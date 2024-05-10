@@ -4,6 +4,8 @@ console.log(states);
 let computerSelection = getComputerChoice();
 console.log(computerSelection); //only for dev purposes
 
+let round = 0;
+
 let pointsComp = 0;
 let pointsPlayer = 0;
 
@@ -22,6 +24,9 @@ function getComputerChoice()
 
 
 function playRound(playerSelection, computerSelection) { //compares the players and computers choices
+    computerSelection = getComputerChoice();
+    console.log(computerSelection);
+    round++;
     if (computerSelection == "rock" && playerSelection == "scissors")
     {
         pointsComp += 1;
