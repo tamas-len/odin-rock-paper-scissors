@@ -11,6 +11,10 @@ const paperbtn = document.querySelector('#paper'); //get the buttons from the DO
 const rockbtn = document.querySelector('#rock');
 const scissorsbtn = document.querySelector('#scissors');
 
+const results = document.querySelector('#results');
+const comppoints = document.querySelector('#comppoints')
+const playerpoints = document.querySelector('#playerpoints');
+
 function getComputerChoice()
 {
     return states[Math.floor(Math.random() * 3 + 0)]; //chooses randomly from the 'states' array
