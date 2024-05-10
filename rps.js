@@ -2,7 +2,6 @@ let states = ['rock', 'paper', 'scissors'];
 console.log(states);
 
 let computerSelection = getComputerChoice();
-console.log(computerSelection); //only for dev purposes
 
 let round = 0;
 
@@ -35,7 +34,6 @@ function writeOut()
 
 function playRound(playerSelection, computerSelection) { //compares the players and computers choices
     computerSelection = getComputerChoice();
-    console.log(computerSelection);
     round++;
     roundElement.textContent = 'round ' + round;
     if (computerSelection == "rock" && playerSelection == "scissors")
